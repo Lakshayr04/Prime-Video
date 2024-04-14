@@ -1,0 +1,282 @@
+body{
+    background-color: #abe4f9;
+    color: rgb(137, 0, 0);
+}
+
+
+header {
+    background-color: #fb1706;
+    color: rgb(0, 0, 0);
+    text-decoration: double;
+    text-align: center;
+    padding: 0px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.logo{
+    font-size: 2em;
+    margin-right: 20px;
+    padding: 10px 0;
+    color: #151111;
+    text-decoration: none; 
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+    font-style: italic;
+ }
+
+ h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+article {
+    width: 35%; 
+    margin-left: 41px;
+    padding: 25px;
+    text-align: center;
+}
+#close-button{
+    display: none;
+}
+
+
+article {
+    background-color: #291d1de4;
+    border: 1px solid #000000;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    display: inline-block;
+    width: 22%; 
+    margin-left: 30px;
+    margin-right: 5px;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 20;
+    text-align: left;
+}
+
+article h3{
+    margin-top: 0;
+}
+.nav-links a:hover {
+    background-color: #ff0000;
+    color: #000000;
+    transition: background-color 0.5s;
+}
+
+
+footer{
+    clear: both;
+    text-align: center;
+    color: #fb1706;
+    background-color: black;
+    font-size: 4em;
+}
+
+
+
+
+/*Tablet and Desktop (above 601px)*/
+@media screen and (min-width: 601px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        font-size: 0.8em;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    img{
+        width: 100%;
+    }
+    article {
+        border-radius: 5px;
+        margin-bottom: 50px;
+        display: inline-block;
+        width: 25%; 
+        margin-left: 60px;
+        margin-right: 5px;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+/***************/
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 0px;
+        height: 35%;
+        margin: auto;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    body{
+        background-color: #dafb06;
+        filter: blur(1px);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right:20px;
+        top:30px;
+    }
+    img{
+        width: 110%;
+    }
+    article {
+        width: 35%; 
+        margin-left: 41px;
+        padding: 25px;
+        text-align: center;
+    }
+    .dropdown {
+        display: none;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        right: 0; 
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dropdown.active {
+        display: flex;
+    }
+    
+.close-button {
+    cursor: pointer;
+    font-size: 3em;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1; 
+    display: flex; 
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+
+footer{
+    clear: both;
+    text-align: center;
+    color: #fb1706;
+    background-color: black;
+    font-size: 2em;
+}
+}
+
+
+
+/* Tablet devices (601px to 1024px width) */
+@media screen and (min-width: 601px) and (max-width: 1024px) { 
+    
+    body {
+        background-color: #ff7f44;
+    }
+    header{
+        background-color: #b4dede;
+    }
+    .logo{
+        color: #2a1616;
+        font-weight: bold;
+    }
+}
+
+
+/************** Desktop (1025px and above) **************/
+@media screen and (min-width: 1025px) { 
+    body {
+        background-color: #03434f;
+       }
+
+       h2{
+        margin-top: 0;
+        color: red;
+        font-size: 4em;
+        font-family: serif;
+       }
+
+    }
